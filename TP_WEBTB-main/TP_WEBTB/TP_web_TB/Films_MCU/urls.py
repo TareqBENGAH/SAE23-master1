@@ -22,6 +22,6 @@ urlpatterns = [
     path("delete2/<int:id>", views.delete2),
 
     #TROISIEME CRUD:
-    path("categorie/",views.categorie)
+    path("categorie/",views.categorie),
 
 ]

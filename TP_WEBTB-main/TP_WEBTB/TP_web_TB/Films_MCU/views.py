@@ -112,4 +112,5 @@ def delete2(request, id):
     return HttpResponseRedirect("/Films_MCU/home")
 
 def categorie(request, id):
+    cat = Categorie.objects.models.get
     return render(request,"Films_MCU/categorie.html",{"cat":categorie,"id":id})
