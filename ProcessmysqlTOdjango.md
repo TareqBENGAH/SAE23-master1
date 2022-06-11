@@ -26,5 +26,5 @@ Puis se rendre dans le fichier _init_.py pour importer le mysqlclient (le serveu
 Ensuite lancer python manage.py makemigrations pour pouvoir réaliser les migrations puis appliquer python manage.py migrate 
 Cela fait crée un fichier manage.py avec toutes les tables dedans donc faire cette commande :
 python manage.py inspectdb > models.py  
-puis après le déplacer dans votre application vous verrez cela fonctionnel
+puis après le déplacer dans votre application vous verrez cela fonctionne
 
