@@ -2,14 +2,13 @@
 Tout d'abord il y'a deux branch la branch -master celle ou l'on va mettre tous codes fonctionnelles à 100% ainsi que la branch -master2test celle qui va nous permettre de tous nos codes de test
 pour essayer de ne pas tous mélanger. 
 
-Télécharger le logiciel mysqlserver : 
-https://dev.mysql.com/downloads/mysql/
+Télécharger le logiciel mysqlserver : https://dev.mysql.com/downloads/mysql/
 Puis lancer le serveur en root puis crée un mot de passe : root : djangoserver
-Il faut également télécharger l'application Mysqlworkbench : 
-https://www.mysql.com/fr/products/workbench/
+Il faut également télécharger l'application Mysqlworkbench : https://www.mysql.com/fr/products/workbench/
 
 
 Maintenant faire la table dans MysqlWorkbench après avoir crée la table il faut se rendre sur django puis aller dans settings.py > databases :
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', 
