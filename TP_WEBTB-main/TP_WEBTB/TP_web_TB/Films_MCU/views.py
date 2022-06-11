@@ -3,7 +3,6 @@ from django.http import HttpResponseRedirect
 from . import models
 from .forms import FilmsForm
 from .forms import SuperheroForm
-from .forms import CategorieForm
 from .forms import ActeursForm
 
 # Create your views here.
@@ -96,7 +95,7 @@ def affiche2(request,id):
 def update2(request,id):
     superhero = models.Superhero.objects.get(pk=id)
     form = SuperheroForm(superhero.dico())
-    return render(request,"Films_MCU/formu2.html",{"form": form,"id":id})
+    return render(request,"Films_MCU/formu2.html",{"form": form,"id": id})
 
 def traitementupdate2(request, id):
     form = SuperheroForm(request.POST,request.FILES)

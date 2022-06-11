@@ -44,11 +44,12 @@ class CommentairesfilmsForm(ModelForm):
 class FilmsForm(ModelForm):
     class Meta:
         model = models.Films
-        fields = ('nom_film','superhero','date', 'producteur','resume')
+        fields = ('film','titre', 'année_sortie','affiche','réalisateur','catégorie')
         labels = {
-            'nom_film':_("Nom du film:"),
-            'superhero':_("Superhero du film"),
-            'date':_('Date de creation:'),
-            'producteur':_('Le nom du producteur du film'),
-            'resume': _('Un resume du film:'),
+            'film':_("Le nom du film"),
+            'titre':_("Le titre du film"),
+            'année_sortie':_("L'année de sortie du film"),
+            'affiche':_("L'affiche du film"),
+            'réalisateur':_("Le réalisateur du film"),
+            'catégorie':_("La catégorie du film"),
         }
