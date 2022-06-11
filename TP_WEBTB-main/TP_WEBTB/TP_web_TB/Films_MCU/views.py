@@ -3,6 +3,8 @@ from django.http import HttpResponseRedirect
 from . import models
 from .forms import FilmsForm
 from .forms import SuperheroForm
+from .forms import CategorieForm
+from .forms import ActeursForm
 
 # Create your views here.
 

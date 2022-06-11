@@ -10,6 +10,7 @@ FilmsMcu - Ajouter Acteur
   {% else %}
         <h2>Ajouter un Acteur</h2>
         <form method="post" action="/Films_MCU/traitement2/">
+
   {% endif %}
       {% csrf_token %}
       {{ form.as_ul }}

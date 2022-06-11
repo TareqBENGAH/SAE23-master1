@@ -34,7 +34,13 @@ class Acteurs(models.Model):
     prénom = models.CharField(db_column='Prénom', max_length=45, blank=True, null=True)  # Field name made lowercase.
     age = models.DateTimeField(db_column='Age', blank=True, null=True)  # Field name made lowercase.
     photos = models.TextField(db_column='Photos', blank=True, null=True)  # Field name made lowercase.
-    acteurscol = models.CharField(db_column='Acteurscol', max_length=45, blank=True, null=True)  # Field name made lowercase.
+
+    def __str__(self):
+        return f"{self.nom}"
+
+    def dico(self):
+        return{"nom": self.nom, "prénom": self.prénom, "age": self.age, "photos": self.photos}
+
 
     class Meta:
         managed = False
@@ -44,6 +50,12 @@ class Acteurs(models.Model):
 class Catgoriesfilms(models.Model):
     nom = models.CharField(max_length=45, blank=True, null=True)
     descriptif = models.CharField(max_length=45, blank=True, null=True)
+
+    def __str__(self):
+        return f"{self.nom}"
+
+    def dico(self):
+        return{"nom": self.nom, "descriptif": self.descriptif}
 
     class Meta:
         managed = False
@@ -56,6 +68,12 @@ class Commentairesfilms(models.Model):
     note = models.IntegerField(db_column='Note', blank=True, null=True)  # Field name made lowercase.
     commentaire = models.CharField(db_column='Commentaire', max_length=45, blank=True, null=True)  # Field name made lowercase.
     date = models.DateTimeField(db_column='Date', blank=True, null=True)  # Field name made lowercase.
+
+    def __str__(self):
+        return f"{self.film}"
+
+    def dico(self):
+        return{"film": self.film, "personnes": self.personnes, "note": self.note, "commentaire": self.commentaire, "date": self.date}
 
     class Meta:
         managed = False
@@ -70,6 +88,11 @@ class Films(models.Model):
     réalisateur = models.CharField(max_length=45, blank=True, null=True)
     catégorie = models.CharField(max_length=45, blank=True, null=True)
 
+    def __str__(self):
+        return f"{self.film}"
+    def dico(self):
+        return{"film": self.film, "titre": self.titre, "année_sortie": self.année_sortie, "affiche": self.affiche, "réalisateur": self.réalisateur, "catégorie": self.catégorie}
+
     class Meta:
         managed = False
         db_table = 'Films'
@@ -82,6 +105,11 @@ class FilmsMcuFilms(models.Model):
     date = models.DateField()
     resume = models.TextField()
     superhero = models.ForeignKey('FilmsMcuSuperhero', models.DO_NOTHING, blank=True, null=True)
+
+    def __str__(self):
+        return f"{self.nom_film}"
+    def dico(self):
+        return{"nom_film": self.nom_film, "producteur": self.producteur, "date": self.date, "resume": self.resume, "superhero": self.superhero}
 
     class Meta:
         managed = False
@@ -96,6 +124,11 @@ class FilmsMcuSuperhero(models.Model):
     acteurs = models.TextField()
     super_pouvoir = models.TextField()
     description = models.TextField()
+
+    def __str__(self):
+        return f"{self.nom}"
+    def dico(self):
+        return{"nom": self.nom, "date": self.date, "créateur": self.créateur, "acteurs": self.acteurs, "super_pouvoir": self.super_pouvoir, "description": self.description}
 
     class Meta:
         managed = False
