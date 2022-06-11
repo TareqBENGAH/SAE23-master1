@@ -15,12 +15,6 @@ class Superhero(models.Model):
     def dico(self):
         return{"nom": self.nom, "date": self.date , "createur" : self.createur , "acteurs" : self.acteurs, "super_pouvoir" : self.super_pouvoir, "description" : self.description}
 
-    def __str__(self):
-        return f"{self.nom_film}"
-
-    def dico(self):
-        return{"nom_film": self.nom_film, "superhero" : self.superhero, "producteur": self.producteur, "date": self.date, "resume": self.resume}
-
 
 class Acteurs(models.Model):
     nom = models.CharField(db_column='Nom', max_length=45, blank=True, null=True)  # Field name made lowercase.
