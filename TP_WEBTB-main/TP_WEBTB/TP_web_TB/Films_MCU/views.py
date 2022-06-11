@@ -113,4 +113,4 @@ def delete2(request, id):
 
 def categorie(request, id):
     cat = Categorie.objects.models.get
-    return render(request,"Films_MCU/categorie.html",{"cat":categorie,"id":id})
+    return render(request,"Films_MCU/categorie.html",{"cat": cat})
