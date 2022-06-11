@@ -1,7 +1,7 @@
 ###*** SAE23-master1
 Tout d'abord il y'a deux branch la branch -master celle ou l'on va mettre tous codes fonctionnelles à 100% ainsi que la branch -master2test celle qui va nous permettre de tous nos codes de test
 pour essayer de ne pas tous mélanger. 
-***
+
 Télécharger le logiciel mysqlserver : 
 https://dev.mysql.com/downloads/mysql/
 Puis lancer le serveur en root puis crée un mot de passe : root : djangoserver
@@ -28,4 +28,4 @@ Ensuite lancer python manage.py makemigrations pour pouvoir réaliser les migrat
 Cela fait crée un fichier manage.py avec toutes les tables dedans donc faire cette commande :
 python manage.py inspectdb > models.py  
 puis après le déplacer dans votre application vous verrez cela fonctionnel
-***
+
